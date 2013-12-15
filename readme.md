@@ -8,6 +8,9 @@ With node:
 
 ```
 npm install vecmath
+
+... in code ...
+var Matrix4 = require('vecmath').Matrix4;
 ```
 
 Or you can grab the UMD build from the `build` folder, which will work with RequireJS or a non-module app.
@@ -60,7 +63,13 @@ http://jsperf.com/gl-matrix-vs-vecmath
 
 ## What about WebGL?
 
-Using a typed array (if available) for matrices was definitely the right choice of gl-matrix, and so we do the same for WebGL compatibility.
+Using a typed array (if available) for matrices was definitely the right choice of gl-matrix, and so we do the same for WebGL compatibility. Matrix objects have `val`, which is the backing array (Float32Array, or falls back to Array for old browsers).
+
+```javascript
+var mat = new Matrix4();
+
+gl.uniformMatrix4fv(loc, false, mat.val);
+```
 
 ## What about new objects?
 

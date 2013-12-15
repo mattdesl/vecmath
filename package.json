@@ -8,6 +8,10 @@
   },
   "author": "",
   "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattdesl/vecmath"
+  },
   "dependencies": {
   },
   "devDependencies": {
