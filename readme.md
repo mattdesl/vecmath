@@ -2,6 +2,16 @@
 
 This is a small vector module, built with the optimized codebase of [gl-matrix](https://github.com/toji/gl-matrix) but using objects and JavaScript paradigms instead of typed arrays. 
 
+## install
+
+With node:
+
+```
+npm install vecmath
+```
+
+Or you can grab the UMD build from the `build` folder, which will work with RequireJS or a non-module app.
+
 ## Why another library?
 
 gl-matrix is indeed one of the best and fastest vector/matrix libraries for real-time JavaScript, especially for WebGL purposes (thanks to its use of typed arrays). However, it leads to a horrible end-user experience, for example if you are buidling a 2D or 3D game framework on top of gl-matrix. The user code looks like:

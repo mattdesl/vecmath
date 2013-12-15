@@ -1,7 +1,7 @@
 {
   "name": "vecmath",
   "version": "0.0.0",
-  "description": "optimized vector/matrix math using objects",
+  "description": "Highly optimized vector/matrix math (using objects)",
   "main": "lib/index.js",
   "scripts": {
     "test": "node test.js"
