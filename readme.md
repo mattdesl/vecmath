@@ -1,6 +1,6 @@
 ## vecmath
 
-This is a small vector module, built on the optimized codebase of [gl-matrix](https://github.com/toji/gl-matrix) but using objects and JavaScript paradigms instead of typed arrays. It also includes a Pool utility, for reducing allocations in your real-time applications. 
+This is a small vector module, built with the optimized codebase of [gl-matrix](https://github.com/toji/gl-matrix) but using objects and JavaScript paradigms instead of typed arrays. 
 
 ## Why another library?
 
