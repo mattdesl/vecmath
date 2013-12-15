@@ -1,0 +1,17 @@
+{
+  "name": "vecmath",
+  "version": "0.0.0",
+  "description": "optimized vector/matrix math using objects",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "browserify": "~3.3.0",
+    "uglify-js": "~2.4.7"
+  }
+}
