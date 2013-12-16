@@ -73,7 +73,13 @@ gl.uniformMatrix4fv(loc, false, mat.val);
 
 ## What about new objects?
 
-Just like in gl-matrix, the API tries to encourage re-using vectors to avoid allocations. However, if you need to create new objects (out of laziness or some other reason), all functions that take a vector/quaternion type will support lightweight objects as well:
+Just like in gl-matrix, the API tries to encourage re-using vectors to avoid allocations. So often your code will look like this:
+
+```javascript
+myVec.add( tmp.set(0, 10, 50) );
+```
+
+However, if you need to create new objects (out of laziness or some other reason), all functions that take a vector/quaternion type will support lightweight objects as well:
 
 ```javascript
 myVec.add({ x:0, y: 10, z: 50 });
