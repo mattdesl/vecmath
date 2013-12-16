@@ -56,7 +56,7 @@ It adds features like method chaining, optional parameters to constructor, and X
 
 The reason gl-matrix is so blazingly fast is mostly because its code is highly optimized. It unrolls loops, uses inline code everywhere, and takes advantage of JS variable caching. 
 
-The difference between property accessors instead of array accessors is negligible for the vast majority of applications. Thanks to optimizations on JS engines (V8, SpiderMonkey, etc), hidden classes and inline caches are _really_ fast nowadays (and will probably only get faster). As you can see in the following benchmarks, class-based Vectors actually outperform array access:
+The difference between property and array accessors is negligible for the vast majority of applications. Thanks to optimizations on JS engines (V8, SpiderMonkey, etc), hidden classes and inline caches are _really_ fast nowadays (and will probably only get faster). As you can see in the following benchmarks, class-based Vectors actually outperform array access:
  
 http://jsperf.com/gl-matrix-vs-objects/4  
 http://jsperf.com/gl-matrix-vs-vecmath
