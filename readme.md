@@ -89,7 +89,6 @@ The library does its best to stay consistent with the gl-matrix API, but also in
 
 - `Vector3.project(projMatrix)`: this method is useful for projecting a 3D point into 2D space
 - `Vector3.unproject(viewport, invProjMatrix)`: useful for _un_projecting a 2D point into 3D space
-- `Vector3.rotate(axis, radians)`: rotates a vector by multiplying it by a 4x4 rotation matrix. 
 
 ## TODO:
 
