@@ -17,7 +17,7 @@ Or you can grab the UMD build from the `build` folder, which will work with Requ
 
 ## Why another library?
 
-gl-matrix is indeed one of the best and fastest vector/matrix libraries for real-time JavaScript, especially for WebGL purposes (thanks to its use of typed arrays). However, it leads to a horrible end-user experience, for example if you are buidling a 2D or 3D game framework on top of gl-matrix. The user code looks like:
+gl-matrix is indeed one of the best and fastest vector/matrix libraries for real-time JavaScript, especially for WebGL purposes (thanks to its use of typed arrays). However, it leads to a poor end-user experience, for example if you are buidling a 2D or 3D game framework on top of gl-matrix. The end-user code looks like this:
 
 ```javascript
 var test = vec3.create();
@@ -36,7 +36,7 @@ foobar( sprite.velocity[0], sprite.velocity[1], sprite.velocity[2] );
 Using array indices is error-prone, has no auto-completion or IDE refactoring, and makes your code more difficult to read. The static method calls also tend to bloat your math code. It just doesn't feel "right" with a language as dynamic as JavaScript. 
 
 
-Instead, with vecmath, the above code can be written like so:
+Instead, with this module, the above code can be written like so:
 
 ```javascript
 var test = new Vector3();
@@ -82,6 +82,14 @@ myVec.add({ x:0, y: 10, z: 50 });
 These are usually a lot faster to allocate than a Vector class, or a Float32Array (in the case of gl-matrix). 
 
 If you find yourself creating a lot of objects, you should use a Pool to reduce allocations. 
+
+## Extra features
+
+The library does its best to stay consistent with the gl-matrix API, but also includes a couple extra features:
+
+- `Vector3.project(projMatrix)`: this method is useful for projecting a 3D point into 2D space
+- `Vector3.unproject(viewport, invProjMatrix)`: useful for _un_projecting a 2D point into 3D space
+- `Vector3.rotate(axis, radians)`: rotates a vector by multiplying it by a 4x4 rotation matrix. 
 
 ## TODO:
 
