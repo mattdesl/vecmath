@@ -4,6 +4,8 @@
   "description": "Highly optimized vector/matrix math (using objects)",
   "main": "lib/index.js",
   "scripts": {
+    "browserify": "mkdir -p build && browserify ./lib/index.js -s vecmath -o build/vecmath.js",
+    "uglify": "uglifyjs build/vecmath.js -o build/vecmath.min.js",
     "test": "node test.js"
   },
   "author": "",

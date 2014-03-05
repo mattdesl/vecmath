@@ -96,7 +96,7 @@ If you find yourself creating a lot of objects, you should use a Pool to reduce 
 The library does its best to stay consistent with the gl-matrix API, but also includes a couple extra features:
 
 - `Vector3.project(projMatrix)`: this method is useful for projecting a 3D point into 2D space
-- `Vector3.unproject(viewport, invProjMatrix)`: useful for _un_projecting a 2D point into 3D space
+- `Vector3.unproject(viewport, invProjMatrix)`: useful for *un*projecting a 2D point into 3D space
 
 ## TODO:
 
@@ -105,4 +105,4 @@ The library does its best to stay consistent with the gl-matrix API, but also in
 - Add mat2 and mat2d
 - Test Quaternion + Matrix classes and compare with gl-matrix results
 - Further improvements to test suite, using mocha or something
-- Standalone UMD build for non-node users
+- Make it more modular by placing each class in its own module. Will probably be `math-vector2`, `math-vector3`, etc. since `vector2` is already taken.
