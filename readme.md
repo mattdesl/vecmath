@@ -47,7 +47,7 @@ var x = sprite.position.x + otherSprite.position.x;
 
 sprite.velocity.normalize().scale(5);
 
-foobar( sprite.x, sprite.y, sprite.z );
+foobar( sprite.velocity.x, sprite.velocity.y, sprite.velocity.z );
 ```
 
 It adds features like method chaining, optional parameters to constructor, and XYZW access for clean end-user code. 
