@@ -106,3 +106,8 @@ The library does its best to stay consistent with the gl-matrix API, but also in
 - Test Quaternion + Matrix classes and compare with gl-matrix results
 - Further improvements to test suite, using mocha or something
 - Make it more modular by placing each class in its own module. Will probably be `math-vector2`, `math-vector3`, etc. since `vector2` is already taken.
+
+
+## License
+
+MIT
