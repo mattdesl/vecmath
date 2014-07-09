@@ -1,6 +1,6 @@
 {
   "name": "vecmath",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Highly optimized vector/matrix math (using objects)",
   "main": "lib/index.js",
   "scripts": {
