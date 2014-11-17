@@ -2,14 +2,14 @@
 
 Although classes and chainable methods can lead to cleaner code and might be easier for rapid prototyping, they ultimately are not as good for module interoperability as plain arrays. For modules I would recommend [gl-vec2](https://github.com/stackgl/gl-vec2), [gl-vec3](https://github.com/stackgl/gl-vec3), [gl-mat4](https://github.com/stackgl/gl-mat4), etc. as it's more modular and generic. Examples:
 
-https://www.npmjs.org/package/delaunay-triangulate
-https://www.npmjs.org/package/simplify-path  
-https://www.npmjs.org/package/chaikin-smooth
-https://www.npmjs.org/package/bezier
-https://www.npmjs.org/package/adaptive-bezier-curve
-https://www.npmjs.org/package/triangulate-contours
-https://www.npmjs.org/package/bunny
-https://www.npmjs.org/package/parse-svg-path
+https://www.npmjs.org/package/delaunay-triangulate  
+https://www.npmjs.org/package/simplify-path    
+https://www.npmjs.org/package/chaikin-smooth  
+https://www.npmjs.org/package/bezier  
+https://www.npmjs.org/package/adaptive-bezier-curve  
+https://www.npmjs.org/package/triangulate-contours  
+https://www.npmjs.org/package/bunny  
+https://www.npmjs.org/package/parse-svg-path  
 
 etc.
 
