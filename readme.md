@@ -1,3 +1,20 @@
+## no longer maintained
+
+Although classes and chainable methods can lead to cleaner code and might be easier for rapid prototyping, they ultimately are not as good for module interoperability as plain arrays. For modules I would recommend [gl-vec2](https://github.com/stackgl/gl-vec2), [gl-vec3](https://github.com/stackgl/gl-vec3), [gl-mat4](https://github.com/stackgl/gl-mat4), etc. as it's more modular and generic. Examples:
+
+https://www.npmjs.org/package/delaunay-triangulate
+https://www.npmjs.org/package/simplify-path  
+https://www.npmjs.org/package/chaikin-smooth
+https://www.npmjs.org/package/bezier
+https://www.npmjs.org/package/adaptive-bezier-curve
+https://www.npmjs.org/package/triangulate-contours
+https://www.npmjs.org/package/bunny
+https://www.npmjs.org/package/parse-svg-path
+
+etc.
+
+--
+
 ## vecmath
 
 This is a small vector module, built with the optimized codebase of [gl-matrix](https://github.com/toji/gl-matrix) but using objects and JavaScript paradigms instead of typed arrays. 
@@ -15,44 +32,7 @@ var Matrix4 = require('vecmath').Matrix4;
 
 Or you can grab the UMD build from the `build` folder, which will work with RequireJS or a non-module app.
 
-## Why another library?
-
-gl-matrix is indeed one of the best and fastest vector/matrix libraries for real-time JavaScript, especially for WebGL purposes (thanks to its use of typed arrays). However, it leads to a poor end-user experience, for example if you are buidling a 2D or 3D game framework on top of gl-matrix. The end-user code looks like this:
-
-```javascript
-var test = vec3.create();
-var other = vec3.fromValues(5, 2, 1);
-var other2 = vec3.copy( vec3.create(), other );
-
-var x = sprite.position[0] + otherSprite.position[0];
-vec3.normalize( sprite.velocity, sprite.velocity );
-vec3.scale( sprite.velocity, sprite.velocity, 5 );
-
-foobar( sprite.velocity[0], sprite.velocity[1], sprite.velocity[2] );
-
-.. etc ..
-```
-
-Using array indices is error-prone, has no auto-completion or IDE refactoring, and makes your code more difficult to read. The static method calls also tend to bloat your math code. It just doesn't feel "right" with a language as dynamic as JavaScript. 
-
-
-Instead, with this module, the above code can be written like so:
-
-```javascript
-var test = new Vector3();
-var other = new Vector3(5, 2, 1);
-var other2 = new Vector3(other);
-
-var x = sprite.position.x + otherSprite.position.x;
-
-sprite.velocity.normalize().scale(5);
-
-foobar( sprite.velocity.x, sprite.velocity.y, sprite.velocity.z );
-```
-
-It adds features like method chaining, optional parameters to constructor, and XYZW access for clean end-user code. 
-
-## What about performance?
+## performance
 
 The reason gl-matrix is so blazingly fast is mostly because its code is highly optimized. It unrolls loops, uses inline code everywhere, and takes advantage of JS variable caching. 
 
@@ -106,7 +86,6 @@ The library does its best to stay consistent with the gl-matrix API, but also in
 - Test Quaternion + Matrix classes and compare with gl-matrix results
 - Further improvements to test suite, using mocha or something
 - Make it more modular by placing each class in its own module. Will probably be `math-vector2`, `math-vector3`, etc. since `vector2` is already taken.
-
 
 ## License
 
